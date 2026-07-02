@@ -137,6 +137,13 @@ body {
 	width: 42px;
 }
 
+.divider {
+	background: #373f48;
+	border: none;
+	height: 1px;
+	width: 100%;
+}
+
 .favourite-game-logo {
 	background: var(--main-08);
 }
@@ -157,10 +164,12 @@ body {
 .lastfm-profile span,
 .favourite-heading a {
 	color: #d48747;
+	display: inline-block;
 	text-decoration: dashed;
 	text-decoration-line: underline;
 	text-decoration-thickness: auto;
 	text-underline-offset: 2px;
+	width: fit-content;
 }
 
 .favourite-heading .small {
@@ -1171,10 +1180,25 @@ span.pill {
 	line-height: 1.8;
 }
 
-.widget.page-status div {
-	align-items: flex-start;
+.technology-list {
+	margin-top: 10px;
+}
+
+.technology-box {
 	display: flex;
 	flex-direction: column;
+}
+
+.technology-pills {
+	display: flex;
+	flex-direction: row !important;
+	margin: 8px 0;
+}
+
+.widget.page-status div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	gap: 8px;
 }
 
