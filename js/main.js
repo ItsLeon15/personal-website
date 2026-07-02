@@ -5,10 +5,14 @@ function updateClock() {
 	const clock = document.querySelector("#clock");
 	const now = new Date();
 
-	clock.textContent = "Current time: " + now.toLocaleTimeString("en-GB", {
-		hour: "2-digit",
-		minute: "2-digit",
-	});
+
+	const time = now.toLocaleTimeString();
+	const day = now.getDay();
+
+	const humanReadableDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	const dayName = humanReadableDay[day];
+
+	clock.textContent = dayName + " " + time;
 }
 
 function getLargestLastFmImage(images) {

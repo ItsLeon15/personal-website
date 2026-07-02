@@ -20,42 +20,54 @@
 </div>
 
 <div class="site">
-    <header class="topbar">
-        <a class="site-title" href="/">
-            <span class="title-highlight">/</span>
-            home
-            <span class="title-highlight">/</span>
-            leon
-        </a>
-
-        <div class="ticker" aria-label="Status ticker">
-            <div>
-                <span>
-                    software
-                </span>
-                <span>
-                    testing
-                </span>
-                <span>
-                    devices
-                </span>
-                <span>
-                    web pages
-                </span>
-                <span>
-                    bad defaults
-                </span>
-                <span>
-                    small bugs
-                </span>
-            </div>
-        </div>
-
-        <p id="clock">--:--</p>
-    </header>
-
     <main class="window">
         <aside class="folders" aria-label="Page list">
+            <a class="site-title" href="/">
+                <span class="title-highlight">/</span>
+                <p style="margin: 0; color: gray">
+                    home
+                </p>
+                <span class="title-highlight">/</span>
+                <p style="margin: 0; color: gray">
+                    leon
+                </p>
+
+                <span id="page-home-active">
+                    <span class="title-highlight">/</span>
+                        home
+                    <span class="title-highlight">/</span>
+                        info.md
+                </span>
+
+                <span id="page-life-active">
+                    <span class="title-highlight">/</span>
+                        life
+                    <span class="title-highlight">/</span>
+                        info.md
+                </span>
+
+                <span id="page-projects-active">
+                    <span class="title-highlight">/</span>
+                        projects
+                    <span class="title-highlight">/</span>
+                        info.md
+                </span>
+
+                <span id="page-notes-active">
+                    <span class="title-highlight">/</span>
+                        notes
+                    <span class="title-highlight">/</span>
+                        info.md
+                </span>
+
+                <span id="page-links-active">
+                    <span class="title-highlight">/</span>
+                        links
+                    <span class="title-highlight">/</span>
+                        info.md
+                </span>
+            </a>
+
             <div class="profile-card">
                 <div class="avatar" aria-hidden="true">
                     <img src="images/discord-profile-picture.webp" alt="Profile Picture" />
@@ -685,6 +697,11 @@
         </section>
 
         <aside class="widgets" aria-label="Widgets">
+            <div class="clock-box">
+                Current date:
+                <p id="clock">--:--</p>
+            </div>
+
             <section class="widget lastfm-widget">
                 <div class="widget-title">
                     <strong class="colonSurround" id="lastFmState">
@@ -709,7 +726,10 @@
                 </div>
 
                 <div class="lastfm-profile">
-                    <a id="lastFmProfile" href="#" target="_blank" rel="noreferrer">Listen on:</a>
+                    <div style="display: inline-flex; flex-direction: row; gap: 2px; align-items: center;">
+                        <a id="lastFmProfile" href="#" target="_blank" rel="noreferrer">Listen on</a>
+                        <p>:</p>
+                    </div>
                     <a href="/" id="lastfm-link" class="lastfm-link">
                         <span>
                             last.fm
