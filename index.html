@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="state" aria-hidden="false">
+    <input type="radio" name="page" id="page-home" checked>
+    <input type="radio" name="page" id="page-life">
+    <input type="radio" name="page" id="page-projects">
+    <input type="radio" name="page" id="page-notes">
+    <input type="radio" name="page" id="page-links">
+</div>
+
+<div class="site">
+    <header class="topbar">
+        <a class="site-title" href="#">
+            <span class="title-highlight">/</span>
+            home
+            <span class="title-highlight">/</span>
+            leon
+        </a>
+
+        <div class="ticker" aria-label="Status ticker">
+            <div>
+                <span>software</span>
+                <span>testing</span>
+                <span>devices</span>
+                <span>web pages</span>
+                <span>bad defaults</span>
+                <span>small bugs</span>
+            </div>
+        </div>
+
+        <p id="clock">--:--</p>
+    </header>
+
+    <main class="window">
+        <aside class="folders" aria-label="Page list">
+            <div class="profile-card">
+                <div class="avatar" aria-hidden="true">
+                    <img src="images/discord-profile-picture.webp" alt="Profile Picture" />
+                </div>
+
+                <div>
+                    <strong>Leon1273</strong>
+                    <span>Listening to music and coding projects.</span>
+                </div>
+
+                <div class="location">
+                    <span>he / him</span>
+                    <img
+                            src="images/british-flag.webp"
+                            alt="UK Flag"
+                            width="24"
+                            height="24"
+                    />
+                </div>
+            </div>
+
+            <div class="index-card">
+                <p class="folder-root colonSurround">index</p>
+
+                <label for="page-home">
+                    <span>01</span>
+                    Home
+                </label>
+
+                <label for="page-life">
+                    <span>02</span>
+                    Life
+                </label>
+
+                <label for="page-projects">
+                    <span>03</span>
+                    Projects
+                </label>
+
+                <label for="page-notes">
+                    <span>04</span>
+                    Notes
+                </label>
+
+                <label for="page-links">
+                    <span>05</span>
+                    Links
+                </label>
+            </div>
+
+            <div class="side-note">
+                <div class="widget-title">
+                    <strong class="colonSurround">
+                        current status
+                    </strong>
+                </div>
+                <strong class="widget-description">
+                    Working on a Wheel Spinner mobile app for iOS while listening to music.
+                </strong>
+            </div>
+
+            <section class="widget page-status">
+                <div class="widget-title">
+                    <strong class="colonSurround">
+                        page status
+                    </strong>
+                </div>
+
+                <div style="margin-top: 10px">
+                    <p>
+                        Built:
+                        <strong>28/06/2026</strong>
+                    </p>
+                    <p>
+                        Last updated:
+                        <strong>29/06/2026</strong>
+                    </p>
+                    <p>
+                        Completion date:
+                        <strong>Unknown</strong>
+                    </p>
+                    <hr style="width: 100%; background: #373f48; height: 1px; border: none" />
+                    <div style="display: flex; flex-direction: column">
+                        <p>Technologies built with:</p>
+                        <div style="display: flex; flex-direction: row; gap: 10px; margin: 10px 0;">
+                            <span class="pill">HTML</span>
+                            <span class="pill">CSS</span>
+                            <span class="pill">JS</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <section class="content">
+            <section class="panel panel-home">
+                <a class="nav-tab">
+                    <span class="nav-number">01</span>
+                    <span class="nav-slash">/</span>
+                    <span class="nav-label">home</span>
+                </a>
+                <h1>Welcome!</h1>
+
+                <div class="lead">
+                    <p>
+                        Hi, I'm <strong>Leon</strong> based in the UK.
+                        I usually work on a mixture of different things such as web apps, mobile apps, testing, designs, and data analysis.
+                    </p>
+                    <p>
+                        Some games I play include <strong>Valorant</strong>, <strong>Minecraft</strong>, and <strong>SCP:SL</strong>.
+                        I mostly listen to EDM music from the 2010s like <strong>Alan Walker</strong>, <strong>Calvin Harris</strong>, <strong>K-391</strong>.
+                    </p>
+                    <p>
+                        I've been getting into electronics, making mobile apps, and watching films as I normally just watch TV-shows instead.
+                    </p>
+                </div>
+
+                <div class="split">
+                    <div class="text-box taped">
+                        <h2>in short</h2>
+
+                        <p>
+                            Most of my time goes into testing things, building things, fixing things, and noticing when software makes simple tasks more
+                            annoying than they need to be. Like an OTP field for example.
+                        </p>
+                    </div>
+
+                    <div class="text-box second">
+                        <h2>Usually focusing on:</h2>
+
+                        <ul>
+                            <li>
+                                Mobile apps
+                            </li>
+                            <li>
+                                Web apps
+                            </li>
+                            <li>
+                                Utility projects
+                            </li>
+                            <li>
+                                Xcode and swift UI
+                            </li>
+                            <li>
+                                Software testing
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-box taped">
+                        <h2>This website uses no JavaScript?</h2>
+
+                        <div class="text-box-inner">
+                            <p>
+                                Yes and no, but it's probably not what you think it's being used for.
+                            </p>
+                            <p>
+                                The only parts of the website that uses JavaScript is the clock and the Last.FM player.
+                                Everything else is well... CSS
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel panel-life">
+                <a class="nav-tab">
+                    <span class="nav-number">02</span>
+                    <span class="nav-slash">/</span>
+                    <span class="nav-label">life</span>
+                </a>
+
+                <h1>Life, roughly:</h1>
+
+                <div class="scrapbook">
+                    <div class="scrap scrap-one">
+                        <p>
+                            Most days are a mix of working, coding, and playing games while listening to music all the time.
+                            I work around software, testing code, and building cool projects that help me carry out a niece thing in a quick and efficient
+                            manner.
+                        </p>
+                    </div>
+
+                    <div class="scrap scrap-two">
+                        <p>
+                            I've also been trying to collect more CD's and DVD's to my home collection as paying for monthly subscriptions is a horrible model.
+                            It's going quite well, but I've run out of space in my bedroom for anymore.
+                        </p>
+                    </div>
+
+                    <div class="scrap scrap-three">
+                        <p>
+                            Outside of work, I mainly just like to sit down and chill out for a while.
+                            Some small side-projects here and there and the occasional half-finished project I never manage to get round to finishing.
+                        </p>
+                    </div>
+
+                    <div class="scrap scrap-four">
+                        <p>
+                            Right now I'm working on a Wheel Spinner app that I've mentioned way too many times.
+                            I've also worked on a PDF viewer that I hope to create into a full Android app, but at the moment it's still a side project.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel panel-projects">
+                <a class="nav-tab">
+                    <span class="nav-number">03</span>
+                    <span class="nav-slash">/</span>
+                    <span class="nav-label">projects</span>
+                </a>
+
+                <h1>My projects:</h1>
+
+                <div class="file-table">
+                    <div>
+                        <strong>Wheel Spinner</strong>
+                        <span class="line"></span>
+                        <small>A simple iOS-only wheel spinner for any decision.</small>
+                    </div>
+
+                    <div>
+                        <strong>Daily Notes</strong>
+                        <span class="line"></span>
+                        <small>A quick and easy web app to store and mark off tasks with task-forwarding.</small>
+                    </div>
+
+                    <div>
+                        <strong>Minecraft Analytics</strong>
+                        <span class="line"></span>
+                        <small>A web-app to analyze player count and server statistics.</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel panel-notes">
+                <a class="nav-tab">
+                    <span class="nav-number">04</span>
+                    <span class="nav-slash">/</span>
+                    <span class="nav-label">notes</span>
+                </a>
+
+                <h1>Some notes:</h1>
+
+                <span class="sorry">
+                    Sorry Firefox/Safari users,
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/interpolate-size">interpolate-size</a>
+                    is still in beta. Sorry :(
+                </span>
+
+                <div class="notes">
+                    <details name="notes" open>
+                        <summary>
+                            <span>001</span>
+                            <strong>Software gets worse when it tries to own the user</strong>
+                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+
+                        <p>
+                            A lot of apps feel less like tools and more like systems trying to trap people into their way of doing everything.
+                        </p>
+                    </details>
+
+                    <details name="notes">
+                        <summary>
+                            <span>002</span>
+                            <strong>Simple pages are underrated</strong>
+                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+
+                        <p>
+                            Not every thought needs a full post. Some things are better as a line, a link, or a rough note left somewhere visible.
+                        </p>
+                    </details>
+
+                    <details name="notes">
+                        <summary>
+                            <span>003</span>
+                            <strong>Bad defaults ruin good software</strong>
+                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+
+                        <p>
+                            The fastest way to make something feel hostile is to choose defaults that help the company more than the person using it.
+                        </p>
+                    </details>
+
+                    <details name="notes">
+                        <summary>
+                            <span>004</span>
+                            <strong>Spacing matters more than people admit</strong>
+                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+
+                        <p>
+                            Bad spacing makes a page feel fake immediately. Too even, too boxed-in, too balanced, and suddenly it looks generated.
+                        </p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="panel panel-links">
+                <a class="nav-tab">
+                    <span class="nav-number">05</span>
+                    <span class="nav-slash">/</span>
+                    <span class="nav-label">links</span>
+                </a>
+
+                <h1>Other links:</h1>
+
+                <p class="lead small-lead">
+                    Some other links to my socials if you want to check out more about me.
+                </p>
+
+                <div class="links">
+                    <a class="link link-github" href="https://github.com/ItsLeon15">
+                        <div class="link-nav">
+                            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.93.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.93c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.8c0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z" />
+                            </svg>
+                            <svg class="href-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Github</span>
+                            <p>View my code and open source work</p>
+                        </div>
+                    </a>
+
+                    <a class="link link-twitter" href="https://x.com/dartfawx">
+                        <div class="link-nav">
+                            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M14.36 10.16 22.63 2h-1.96l-7.18 7.08L7.75 2H1.14l8.67 10.7L1.14 22h1.96l7.58-8.16L16.74 22h6.61l-8.99-11.84Zm-2.68 2.88-.88-1.12L3.82 3.56h3l5.65 6.77.88 1.12 7.32 8.98h-3l-5.99-7.39Z" />
+                            </svg>
+                            <svg class="href-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Twitter</span>
+                            <p>View my code and open source work</p>
+                        </div>
+                    </a>
+
+                    <a class="link link-email" href="mailto:leon@itsleon.io">
+                        <div class="link-nav">
+                            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2Zm8 7.55L20 7.5V7H4v.5l8 5.05Zm0 2.1L4 9.6V17h16V9.6l-8 5.05Z" />
+                            </svg>
+                            <svg class="href-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Email</span>
+                            <p>View my code and open source work</p>
+                        </div>
+                    </a>
+
+                    <a class="link link-telegram" href="https://t.me/DartFawx">
+                        <div class="link-nav">
+                            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21.94 4.64 18.7 20.04c-.24 1.09-.89 1.35-1.8.84l-5-3.69-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.1 9.28-8.39c.4-.36-.09-.56-.62-.2L6.04 13.53 1.1 11.98C.03 11.65.01 10.91 1.32 10.4L20.63 2.96c.9-.33 1.68.2 1.31 1.68Z" />
+                            </svg>
+                            <svg class="href-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Telegram</span>
+                            <p>View my code and open source work</p>
+                        </div>
+                    </a>
+
+                    <a class="link link-bluesky" href="https://bsky.app/profile/itsleon.bsky.social">
+                        <div class="link-nav">
+                            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6.34 3.25C8.63 4.97 11.1 8.45 12 10.32c.9-1.87 3.37-5.35 5.66-7.07 1.65-1.24 4.34-2.2 4.34.85 0 .61-.35 5.11-.56 5.84-.72 2.58-3.35 3.24-5.69 2.84 4.09.7 5.13 3.01 2.88 5.32-4.27 4.38-6.14-1.1-6.62-2.5-.09-.26-.13-.38-.01-.38s-.08.12-.17.38c-.48 1.4-2.35 6.88-6.62 2.5-2.25-2.31-1.21-4.62 2.88-5.32-2.34.4-4.97-.26-5.69-2.84C2.19 9.21 1.84 4.71 1.84 4.1c0-3.05 2.69-2.09 4.34-.85h.16Z" />
+                            </svg>
+                            <svg class="href-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Bluesky</span>
+                            <p>View my code and open source work</p>
+                        </div>
+                    </a>
+
+                    <a class="link link-lastfm" href="https://www.last.fm/user/Leon1273">
+                        <div class="link-nav">
+                            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M10.58 17.1c-1.92 0-3.35-1.48-3.35-3.85 0-2.41 1.43-3.95 3.35-3.95 1.27 0 2.16.58 2.74 1.72l.7 1.4 1.72 3.29c.98 1.83 2.14 2.98 4.4 2.98 2.36 0 3.86-1.27 3.86-3.27 0-1.62-.75-2.5-2.55-3.12l-1.23-.43c-.93-.32-1.22-.67-1.22-1.3 0-.68.54-1.1 1.31-1.1.82 0 1.26.31 1.72 1.1l1.6-.98C22.87 8.17 21.9 7.5 20.28 7.5c-1.92 0-3.2 1.2-3.2 2.9 0 1.55.75 2.35 2.42 2.95l1.16.42c1.03.37 1.37.73 1.37 1.46 0 .82-.7 1.34-1.83 1.34-1.3 0-2.05-.67-2.77-2.05l-1.67-3.25-.68-1.38c-.98-1.96-2.37-2.9-4.5-2.9C7.27 7 5 9.45 5 13.25c0 3.73 2.26 6.02 5.48 6.02 2.75 0 4.62-1.57 5.05-4.22h-2.02c-.34 1.34-1.35 2.05-2.93 2.05Z" />
+                            </svg>
+                            <svg class="href-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">last.fm</span>
+                            <p>View my code and open source work</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <label class="next-page-button next-page-home" for="page-life">
+                Next page
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l14 0" />
+                    <path d="M13 18l6 -6" />
+                    <path d="M13 6l6 6" />
+                </svg>
+            </label>
+
+            <label class="back-page-button back-page-life" for="page-home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 12l-14 0" />
+                    <path d="M11 18l-6 -6" />
+                    <path d="M11 6l-6 6" />
+                </svg>
+                Back page
+            </label>
+
+            <label class="next-page-button next-page-life" for="page-projects">
+                Next page
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l14 0" />
+                    <path d="M13 18l6 -6" />
+                    <path d="M13 6l6 6" />
+                </svg>
+            </label>
+
+            <label class="back-page-button back-page-projects" for="page-life">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 12l-14 0" />
+                    <path d="M11 18l-6 -6" />
+                    <path d="M11 6l-6 6" />
+                </svg>
+                Back page
+            </label>
+
+            <label class="next-page-button next-page-projects" for="page-notes">
+                Next page
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l14 0" />
+                    <path d="M13 18l6 -6" />
+                    <path d="M13 6l6 6" />
+                </svg>
+            </label>
+
+            <label class="back-page-button back-page-notes" for="page-projects">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 12l-14 0" />
+                    <path d="M11 18l-6 -6" />
+                    <path d="M11 6l-6 6" />
+                </svg>
+                Back page
+            </label>
+
+            <label class="next-page-button next-page-notes" for="page-links">
+                Next page
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l14 0" />
+                    <path d="M13 18l6 -6" />
+                    <path d="M13 6l6 6" />
+                </svg>
+            </label>
+
+            <label class="back-page-button back-page-links" for="page-notes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 12l-14 0" />
+                    <path d="M11 18l-6 -6" />
+                    <path d="M11 6l-6 6" />
+                </svg>
+                Back page
+            </label>
+        </section>
+
+        <aside class="widgets" aria-label="Widgets">
+            <section class="widget lastfm-widget">
+                <div class="widget-title">
+                    <strong class="colonSurround" id="lastFmState">loading...</strong>
+                </div>
+
+                <div class="lastfm-box">
+                    <img id="albumImage" src="images/fallback-album.webp" alt="Fallback album artwork" class="fallback-album">
+
+                    <div class="track-info">
+                        <p id="trackName">Loading...</p>
+                        <span id="artistName">Loading...</span>
+                        <span id="trackTime"></span>
+                    </div>
+                </div>
+
+                <div class="lastfm-profile">
+                    <a id="lastFmProfile" href="#" target="_blank" rel="noreferrer">Listen on:</a>
+                    <a href="/" id="lastfm-link" class="lastfm-link">
+                        <span>last.fm</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                            <path d="M11 13l9 -9" />
+                            <path d="M15 4h5v5" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <section class="widget favourites-widget">
+                <div class="widget-title">
+                    <strong class="colonSurround">
+                        favourite games
+                    </strong>
+                </div>
+
+                <div class="favourite-games">
+                    <div class="favourite-game-card">
+                        <div class="favourite-game-image favourite-game-logo">
+                            <img src="images/valorant.webp" alt="Valorant">
+                        </div>
+
+                        <div class="favourite-game-content">
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://playvalorant.com">Valorant</a>
+                                </strong>
+                                <span>
+                                    FPS
+                                </span>
+                            </div>
+
+                            <p>
+                                Pretty much the only competitive game I play.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="favourite-game-card">
+                        <div class="favourite-game-image favourite-game-logo">
+                            <img src="images/minecraft.webp" alt="Minecraft">
+                        </div>
+
+                        <div class="favourite-game-content">
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://www.minecraft.net">Minecraft</a>
+                                </strong>
+                                <span>
+                                    Sandbox
+                                </span>
+                            </div>
+
+                            <p>
+                                I know too much, but it's still a good game to relax.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="favourite-game-card">
+                        <div class="favourite-game-image">
+                            <img src="images/scp-sl.webp" alt="SCP: Secret Laboratory">
+                        </div>
+
+                        <div class="favourite-game-content">
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://scpslgame.com">SCP:SL</a>
+                                </strong>
+                                <span>
+                                    Chaos
+                                </span>
+                            </div>
+
+                            <p>
+                                Chaotic and confusing but still really fun to play.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="widget favourites-widget">
+                <div class="widget-title">
+                    <strong class="colonSurround">
+                        favourite applications
+                    </strong>
+                </div>
+
+                <div class="favourite-app-list">
+                    <div class="favourite-app-row">
+                        <div class="favourite-app-image">
+                            <img src="images/xcode.webp" alt="Xcode">
+                        </div>
+
+                        <div>
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://developer.apple.com/xcode">Xcode</a> - <span class="small">(No judging)</span>
+                                </strong>
+                                <span>
+                                    Swift
+                                </span>
+                            </div>
+
+                            <p>
+                                Mainly for building or testing iOS apps.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="favourite-app-row">
+                        <div class="favourite-app-image">
+                            <img src="images/webstorm.webp" alt="WebStorm">
+                        </div>
+
+                        <div>
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://www.jetbrains.com/webstorm">WebStorm</a>
+                                </strong>
+                                <span>
+                                    Dev
+                                </span>
+                            </div>
+
+                            <p>
+                                Used for React, TypeScript, and general web projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="favourite-app-row">
+                        <div class="favourite-app-image">
+                            <img src="images/telegram.webp" alt="Telegram">
+                        </div>
+
+                        <div>
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://telegram.org">Telegram</a>
+                                </strong>
+                                <span>
+                                    Chat
+                                </span>
+                            </div>
+
+                            <p>
+                                For the stickers plus it's much faster than Discord.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="favourite-app-row">
+                        <div class="favourite-app-image">
+                            <img src="images/navibeat.webp" alt="NaviBeat">
+                        </div>
+
+                        <div>
+                            <div class="favourite-heading">
+                                <strong>
+                                    <a href="https://navibeat.app">NaviBeat</a>
+                                </strong>
+                                <span>
+                                    Music
+                                </span>
+                            </div>
+
+                            <p>
+                                A clean and modern Navidrome client for Apple devices
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
