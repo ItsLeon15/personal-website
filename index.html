@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Leon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-styles.css">
+
+    <script src="js/clock.js" defer></script>
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta name="theme-color" content="#07080b">
 </head>
+
+<script>
+	function loadDeferredScript(src) {
+		const script = document.createElement("script");
+
+		script.src = src;
+		script.defer = true;
+
+		document.body.append(script);
+	}
+
+	window.addEventListener("load", function () {
+		if ("requestIdleCallback" in window) {
+			requestIdleCallback(function () {
+				loadDeferredScript("js/lastFM.js");
+			}, { timeout: 2500 });
+
+			return;
+		}
+
+		setTimeout(function () {
+			loadDeferredScript("js/lastFM.js");
+		}, 1500);
+	});
+</script>
 
 <body>
 <div class="state" aria-hidden="false">
@@ -87,15 +121,15 @@
                     <img
                             src="images/british-flag.webp"
                             alt="UK Flag"
-                            width="24"
-                            height="24"
+                            width="22"
+                            height="11"
                     />
                 </div>
             </div>
 
             <div class="index-card">
                 <p class="folder-root colonSurround">
-                    index
+                    Index
                 </p>
 
                 <label for="page-home">
@@ -127,18 +161,21 @@
             <div class="side-note">
                 <div class="widget-title">
                     <strong class="colonSurround">
-                        current status
+                        Current status
                     </strong>
                 </div>
                 <strong class="widget-description">
-                    Working on a Wheel Spinner mobile app for iOS while listening to music.
+                    <span>
+                        Working on a Wheel Spinner mobile app for iOS while listening to music.
+                        As well as working on a macOS, iPad and tvOS alternatives.
+                    </span>
                 </strong>
             </div>
 
             <section class="widget page-status">
                 <div class="widget-title">
                     <strong class="colonSurround">
-                        page status
+                        Page status
                     </strong>
                 </div>
 
@@ -149,18 +186,20 @@
                     </p>
                     <p>
                         Last updated:
-                        <strong>01/07/2026</strong>
+                        <strong>08/07/2026</strong>
                     </p>
                     <p>
-                        Completion date:
-                        <strong>Unknown</strong>
+                        Completion:
+                        <strong>Soon -
+                            <span class="small">(I think)</span>
+                        </strong>
                     </p>
 
                     <hr class="divider" />
 
                     <div class="technology-box">
                         <p>
-                            Technologies built with:
+                            Built with:
                         </p>
 
                         <div class="technology-pills">
@@ -203,7 +242,7 @@
                     </p>
                     <p>
                         Some games I play include <strong>Valorant</strong>, <strong>Minecraft</strong>, and <strong>SCP:SL</strong>.
-                        I mostly listen to EDM music from the 2010s like <strong>Alan Walker</strong>, <strong>Calvin Harris</strong>, <strong>K-391</strong>.
+                        I mostly listen to EDM and Pop music from the 2010s like <strong>Alan Walker</strong>, <strong>Calvin Harris</strong>, <strong>K-391</strong>.
                     </p>
                     <p>
                         I've been getting into electronics, making mobile apps, and watching films as I normally just watch TV-shows instead.
@@ -257,7 +296,7 @@
                             </p>
                             <p>
                                 The only parts of the website that uses JavaScript is the clock and the Last.FM player.
-                                Everything else is well... CSS
+                                Everything else is CSS
                             </p>
                         </div>
                     </div>
@@ -278,7 +317,7 @@
                 </a>
 
                 <h1>
-                    Life, roughly:
+                    Life (roughly):
                 </h1>
 
                 <div class="scrapbook">
@@ -337,16 +376,17 @@
                         </strong>
                         <span class="line"></span>
                         <small>
-                            A simple iOS-only wheel spinner for any decision.
+                            A simple Wheel Spinner app that isn't filled with ads.
                         </small>
                     </div>
 
                     <div>
                         <strong>
-                            Daily Notes</strong>
+                            Daily Notes
+                        </strong>
                         <span class="line"></span>
                         <small>
-                            A quick and easy web app to store and mark off tasks with task-forwarding.
+                            A more personal app that I built to quickly keep down tasks I need to do throughout the day.
                         </small>
                     </div>
 
@@ -356,7 +396,7 @@
                         </strong>
                         <span class="line"></span>
                         <small>
-                            A web-app to analyze player count and server statistics.
+                            A simple analytics tool for tracking player activity on Minecraft Servers written in Java, Node.js and React.
                         </small>
                     </div>
                 </div>
@@ -390,7 +430,7 @@
                                 001
                             </span>
                             <strong>
-                                Software gets worse when it tries to own the user
+                                Software should be simple
                             </strong>
                             <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
@@ -398,7 +438,9 @@
                         </summary>
 
                         <p>
-                            A lot of apps feel less like tools and more like systems trying to trap people into their way of doing everything.
+                            A lot of software is built with and without the user in mind.
+                            Ads and data collection comes standard nowadays which makes the experience feel less like a tool and more as you're the product.
+                            If a business needs to make money, that's fine, but it shouldn't come at the cost of the user.
                         </p>
                     </details>
 
@@ -408,7 +450,7 @@
                                 002
                             </span>
                             <strong>
-                                Simple pages are underrated
+                                Windows is annoying
                             </strong>
                             <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
@@ -416,7 +458,10 @@
                         </summary>
 
                         <p>
-                            Not every thought needs a full post. Some things are better as a line, a link, or a rough note left somewhere visible.
+                            I know Windows is slow, bloated, filled with tracking, but I do still use it.
+                            Most applications I use are either built purely for Windows or an alternative isn't sufficient on other platforms.
+                            I have tried both Linux and macOS, but I find that it's either too open to customization or has to steep of a learning curve to work
+                            with.
                         </p>
                     </details>
 
@@ -426,7 +471,7 @@
                                 003
                             </span>
                             <strong>
-                                Bad defaults ruin good software
+                                I'm not a designer
                             </strong>
                             <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
@@ -434,25 +479,9 @@
                         </summary>
 
                         <p>
-                            The fastest way to make something feel hostile is to choose defaults that help the company more than the person using it.
-                        </p>
-                    </details>
-
-                    <details name="notes">
-                        <summary>
-                            <span>
-                                004
-                            </span>
-                            <strong>
-                                Spacing matters more than people admit
-                            </strong>
-                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 24L32 40L48 24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-
-                        <p>
-                            Bad spacing makes a page feel fake immediately. Too even, too boxed-in, too balanced, and suddenly it looks generated.
+                            While I do like to make designs and want to make everything as good as possible, I'm not a designer.
+                            For this website, I've used a custom Discord skin as a design guide as I love the simplicity of it.
+                            If you've ever seen my Discord app show up on a screenshare, you'll instantly recognize the idea of the boxed elements I've used.
                         </p>
                     </details>
                 </div>
@@ -496,7 +525,7 @@
                                 Github
                             </span>
                             <p>
-                                View my code and open source work
+                                Most are just forks and stars, but I do upload a couple of my own projects here.
                             </p>
                         </div>
                     </a>
@@ -518,7 +547,7 @@
                                 Twitter
                             </span>
                             <p>
-                                Follow me on Twitter
+                                I don't use Twitter that much, but I've added it just in case I do in the future.
                             </p>
                         </div>
                     </a>
@@ -540,7 +569,7 @@
                                 Email
                             </span>
                             <p>
-                                Send me an email!
+                                I don't check my email that often, but if you prefer to email, you can do so.
                             </p>
                         </div>
                     </a>
@@ -562,7 +591,7 @@
                                 Telegram
                             </span>
                             <p>
-                                View my code and open source work
+                                Probably the best way to contact me, I'm online most of the time.
                             </p>
                         </div>
                     </a>
@@ -585,7 +614,7 @@
                                 Bluesky
                             </span>
                             <p>
-                                View my code and open source work
+                                Another platform I don't use that much, but I'm trying to get into.
                             </p>
                         </div>
                     </a>
@@ -608,7 +637,7 @@
                                 last.fm
                             </span>
                             <p>
-                                View my code and open source work
+                                I like the idea of having a public profile of the songs I've listened to.
                             </p>
                         </div>
                     </a>
@@ -698,14 +727,14 @@
 
         <aside class="widgets" aria-label="Widgets">
             <div class="clock-box">
-                Current date:
-                <p id="clock">--:--</p>
+                <span>Current date:</span>
+                <p id="clock">JavaScript disabled</p>
             </div>
 
             <section class="widget lastfm-widget">
                 <div class="widget-title">
                     <strong class="colonSurround" id="lastFmState">
-                        loading...
+                        Loading...
                     </strong>
                 </div>
 
@@ -747,7 +776,7 @@
             <section class="widget favourites-widget">
                 <div class="widget-title">
                     <strong class="colonSurround">
-                        favourite games
+                        Favourite games
                     </strong>
                 </div>
 
@@ -826,7 +855,7 @@
             <section class="widget favourites-widget">
                 <div class="widget-title">
                     <strong class="colonSurround">
-                        favourite applications
+                        Favourite apps
                     </strong>
                 </div>
 
@@ -928,9 +957,6 @@
         </aside>
     </main>
 </div>
-
-<script src="js/clock.js"></script>
-<script src="js/lastFM.js"></script>
 
 </body>
 </html>

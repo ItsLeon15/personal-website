@@ -17,29 +17,12 @@ function setLastFmError(message) {
 	const artistName = document.querySelector("#artistName");
 	const albumImage = document.querySelector("#albumImage");
 
-	if (lastFm) {
-		lastFm.dataset.state = "offline";
-	}
-
-	if (lastFmState) {
-		lastFmState.textContent = "offline";
-	}
-
-	if (trackName) {
-		trackName.textContent = message;
-	}
-
-	if (trackTime) {
-		trackTime.textContent = "";
-	}
-
-	if (artistName) {
-		artistName.textContent = "No track info found";
-	}
-
-	if (albumImage) {
-		setFallbackAlbumImage(albumImage);
-	}
+	if (lastFm) lastFm.dataset.state = "Offline";
+	if (lastFmState) lastFmState.textContent = "Offline";
+	if (trackName) trackName.textContent = message;
+	if (trackTime) trackTime.textContent = "";
+	if (artistName) artistName.textContent = "No track info found";
+	if (albumImage) setFallbackAlbumImage(albumImage);
 }
 
 function renderLastFmTrack(data) {
@@ -52,33 +35,13 @@ function renderLastFmTrack(data) {
 	const lastFmProfile = document.querySelector("#lastFmProfile");
 	const lastFmLink = document.querySelector("#lastfm-link");
 
-	if (lastFm) {
-		lastFm.dataset.state = data.state || "offline";
-	}
-
-	if (lastFmState) {
-		lastFmState.textContent = data.statusText || "offline";
-	}
-
-	if (trackName) {
-		trackName.textContent = data.trackName || "Unknown track";
-	}
-
-	if (trackTime) {
-		trackTime.textContent = data.trackTime || "";
-	}
-
-	if (artistName) {
-		artistName.textContent = data.artistName || "Unknown artist";
-	}
-
-	if (lastFmProfile && data.profileUrl) {
-		lastFmProfile.href = data.profileUrl;
-	}
-
-	if (lastFmLink && data.trackUrl) {
-		lastFmLink.href = data.trackUrl;
-	}
+	if (lastFm) lastFm.dataset.state = data.state || "Offline";
+	if (lastFmState) lastFmState.textContent = data.statusText || "Offline";
+	if (trackName) trackName.textContent = data.trackName || "Unknown track";
+	if (trackTime) trackTime.textContent = data.trackTime || "";
+	if (artistName) artistName.textContent = data.artistName || "Unknown artist";
+	if (lastFmProfile && data.profileUrl) lastFmProfile.href = data.profileUrl;
+	if (lastFmLink && data.trackUrl) lastFmLink.href = data.trackUrl;
 
 	if (!albumImage) {
 		return;
@@ -88,14 +51,15 @@ function renderLastFmTrack(data) {
 		setFallbackAlbumImage(albumImage);
 	};
 
-	if (data.albumImage) {
-		albumImage.src = data.albumImage;
-		albumImage.alt = `${data.trackName || "Last.fm"} artwork`;
-		albumImage.hidden = false;
-		albumImage.classList.remove("fallback-album");
-	} else {
+	if (!data.albumImage) {
 		setFallbackAlbumImage(albumImage);
+		return;
 	}
+
+	albumImage.src = data.albumImage;
+	albumImage.alt = `${data.trackName || "Last.fm"} artwork`;
+	albumImage.hidden = false;
+	albumImage.classList.remove("fallback-album");
 }
 
 async function loadLastFm() {
@@ -119,6 +83,6 @@ async function loadLastFm() {
 	}
 }
 
-loadLastFm();
+loadLastFm().then(r => r);
 
 setInterval(loadLastFm, 60000);

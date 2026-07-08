@@ -2,7 +2,6 @@ function updateClock() {
 	const clock = document.querySelector("#clock");
 	const now = new Date();
 
-
 	const time = now.toLocaleTimeString();
 	const day = now.getDay();
 
