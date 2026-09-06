@@ -51,6 +51,7 @@
     <input type="radio" name="page" id="page-projects">
     <input type="radio" name="page" id="page-notes">
     <input type="radio" name="page" id="page-links">
+    <input type="radio" name="page" id="page-community">
 </div>
 
 <div class="site">
@@ -97,6 +98,13 @@
                 <span id="page-links-active">
                     <span class="title-highlight">/</span>
                         links
+                    <span class="title-highlight">/</span>
+                        info.md
+                </span>
+
+                <span id="page-community-active">
+                    <span class="title-highlight">/</span>
+                        community
                     <span class="title-highlight">/</span>
                         info.md
                 </span>
@@ -156,6 +164,11 @@
                     <span>05</span>
                     Links
                 </label>
+
+                <label for="page-community">
+                    <span>06</span>
+                    Community
+                </label>
             </div>
 
             <div class="side-note">
@@ -167,7 +180,7 @@
                 <strong class="widget-description">
                     <span>
                         Working on a Wheel Spinner mobile app for iOS while listening to music.
-                        As well as working on a macOS, iPad and tvOS alternatives.
+                        As well as working on a macOS, iPad and tvOS versions.
                     </span>
                 </strong>
             </div>
@@ -186,13 +199,7 @@
                     </p>
                     <p>
                         Last updated:
-                        <strong>08/07/2026</strong>
-                    </p>
-                    <p>
-                        Completion:
-                        <strong>Soon -
-                            <span class="small">(I think)</span>
-                        </strong>
+                        <strong>06/09/2026</strong>
                     </p>
 
                     <hr class="divider" />
@@ -242,7 +249,8 @@
                     </p>
                     <p>
                         Some games I play include <strong>Valorant</strong>, <strong>Minecraft</strong>, and <strong>SCP:SL</strong>.
-                        I mostly listen to EDM and Pop music from the 2010s like <strong>Alan Walker</strong>, <strong>Calvin Harris</strong>, <strong>K-391</strong>.
+                        I mostly listen to EDM and Pop music from the 2010s like <strong>Alan Walker</strong>, <strong>Calvin Harris</strong>,
+                        <strong>K-391</strong>.
                     </p>
                     <p>
                         I've been getting into electronics, making mobile apps, and watching films as I normally just watch TV-shows instead.
@@ -296,7 +304,7 @@
                             </p>
                             <p>
                                 The only parts of the website that uses JavaScript is the clock and the Last.FM player.
-                                Everything else is CSS
+                                Everything else is pure CSS and HTML.
                             </p>
                         </div>
                     </div>
@@ -504,9 +512,11 @@
                             The issue I find is that this is only true at the time it's written.
                         </p>
                         <p>
-                            Down the line, other people or the person who wrote it has no idea why a particular decision was made, if changing something will break or if somewhere else relies on the piece of software.
+                            Down the line, other people or the person who wrote it has no idea why a particular decision was made, if changing something will
+                            break or if somewhere else relies on the piece of software.
                             Documentation is crucial at all times even if you might think today it's not needed.
-                            I've learnt the hard way that without documentation, anything can happen including breaking other systems, spending hours of necessary time understanding or breaking something that already works perfectly.
+                            I've learnt the hard way that without documentation, anything can happen including breaking other systems, spending hours of
+                            necessary time understanding or breaking something that already works perfectly.
                         </p>
                         <p>
                             A few minutes of documentation can go a long way even if you don't notice the benefits immediately.
@@ -672,85 +682,53 @@
                 </div>
             </section>
 
-            <label class="next-page-button next-page-home" for="page-life">
-                Next page
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l14 0" />
-                    <path d="M13 18l6 -6" />
-                    <path d="M13 6l6 6" />
-                </svg>
-            </label>
+            <section class="panel panel-community">
+                <a class="nav-tab">
+                    <span class="nav-number">
+                        06
+                    </span>
+                    <span class="nav-slash">
+                        /
+                    </span>
+                    <span class="nav-label">
+                        community
+                    </span>
+                </a>
 
-            <label class="back-page-button back-page-life" for="page-home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 12l-14 0" />
-                    <path d="M11 18l-6 -6" />
-                    <path d="M11 6l-6 6" />
-                </svg>
-                Back page
-            </label>
+                <h1>Community:</h1>
 
-            <label class="next-page-button next-page-life" for="page-projects">
-                Next page
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l14 0" />
-                    <path d="M13 18l6 -6" />
-                    <path d="M13 6l6 6" />
-                </svg>
-            </label>
+                <p class="lead small-lead">
+                    Some other links to friends or communities that I'm in:
+                </p>
 
-            <label class="back-page-button back-page-projects" for="page-life">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 12l-14 0" />
-                    <path d="M11 18l-6 -6" />
-                    <path d="M11 6l-6 6" />
-                </svg>
-                Back page
-            </label>
+                <div class="friends-links">
+                    <a href="https://ferret.life">
+                        <img src="/images/ferret_life.png" width="88" height="31" style="display: block" title="Stay Wiggly!!!" alt="Ferret.life Web Button" />
+                    </a>
+                </div>
+            </section>
 
-            <label class="next-page-button next-page-projects" for="page-notes">
-                Next page
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l14 0" />
-                    <path d="M13 18l6 -6" />
-                    <path d="M13 6l6 6" />
-                </svg>
-            </label>
+            <!-- Home -->
+            <label class="next-page-button next-page-home" for="page-life">Next page</label>
 
-            <label class="back-page-button back-page-notes" for="page-projects">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 12l-14 0" />
-                    <path d="M11 18l-6 -6" />
-                    <path d="M11 6l-6 6" />
-                </svg>
-                Back page
-            </label>
+            <!-- Life -->
+            <label class="back-page-button back-page-life" for="page-home">Back page</label>
+            <label class="next-page-button next-page-life" for="page-projects">Next page</label>
 
-            <label class="next-page-button next-page-notes" for="page-links">
-                Next page
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l14 0" />
-                    <path d="M13 18l6 -6" />
-                    <path d="M13 6l6 6" />
-                </svg>
-            </label>
+            <!-- Projects -->
+            <label class="back-page-button back-page-projects" for="page-life">Back page</label>
+            <label class="next-page-button next-page-projects" for="page-notes">Next page</label>
 
-            <label class="back-page-button back-page-links" for="page-notes">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 12l-14 0" />
-                    <path d="M11 18l-6 -6" />
-                    <path d="M11 6l-6 6" />
-                </svg>
-                Back page
-            </label>
+            <!-- Notes -->
+            <label class="back-page-button back-page-notes" for="page-projects">Back page</label>
+            <label class="next-page-button next-page-notes" for="page-links">Next page</label>
+
+            <!-- Links -->
+            <label class="back-page-button back-page-links" for="page-notes">Back page</label>
+            <label class="next-page-button next-page-links" for="page-community">Next page</label>
+
+            <!-- Community -->
+            <label class="back-page-button back-page-community" for="page-links">Back page</label>
         </section>
 
         <aside class="widgets" aria-label="Widgets">
@@ -976,7 +954,7 @@
                             </div>
 
                             <p>
-                                A clean and modern Navidrome client for Apple devices
+                                A clean and modern Navidrome client for Apple devices.
                             </p>
                         </div>
                     </div>

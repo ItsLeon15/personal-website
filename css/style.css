@@ -483,7 +483,8 @@ summary {
 #page-life-active,
 #page-projects-active,
 #page-notes-active,
-#page-links-active {
+#page-links-active,
+#page-community-active {
 	display: none;
 }
 
@@ -491,7 +492,8 @@ body:has(#page-home:checked) #page-home-active,
 body:has(#page-life:checked) #page-life-active,
 body:has(#page-projects:checked) #page-projects-active,
 body:has(#page-notes:checked) #page-notes-active,
-body:has(#page-links:checked) #page-links-active {
+body:has(#page-links:checked) #page-links-active,
+body:has(#page-community:checked) #page-community-active {
 	display: contents;
 }
 
@@ -499,7 +501,8 @@ body:has(#page-home:checked) .folders label[for="page-home"],
 body:has(#page-life:checked) .folders label[for="page-life"],
 body:has(#page-projects:checked) .folders label[for="page-projects"],
 body:has(#page-notes:checked) .folders label[for="page-notes"],
-body:has(#page-links:checked) .folders label[for="page-links"] {
+body:has(#page-links:checked) .folders label[for="page-links"],
+body:has(#page-community:checked) .folders label[for="page-community"] {
 	background: var(--selected);
 	border-color: var(--line);
 	box-shadow: 3px 3px 0 var(--shadow);
@@ -511,7 +514,8 @@ body:has(#page-home:checked) .folders label[for="page-home"]::after,
 body:has(#page-life:checked) .folders label[for="page-life"]::after,
 body:has(#page-projects:checked) .folders label[for="page-projects"]::after,
 body:has(#page-notes:checked) .folders label[for="page-notes"]::after,
-body:has(#page-links:checked) .folders label[for="page-links"]::after {
+body:has(#page-links:checked) .folders label[for="page-links"]::after,
+body:has(#page-links:checked) .folders label[for="page-community"]::after {
 	color: var(--accent);
 	content: "<";
 	position: absolute;
@@ -522,7 +526,8 @@ body:has(#page-home:checked) .folders label[for="page-home"] span,
 body:has(#page-life:checked) .folders label[for="page-life"] span,
 body:has(#page-projects:checked) .folders label[for="page-projects"] span,
 body:has(#page-notes:checked) .folders label[for="page-notes"] span,
-body:has(#page-links:checked) .folders label[for="page-links"] span {
+body:has(#page-links:checked) .folders label[for="page-links"] span,
+body:has(#page-community:checked) .folders label[for="page-community"] span {
 	color: var(--accent);
 }
 
@@ -570,6 +575,10 @@ body:has(#page-links:checked) .folders label[for="page-links"] span {
 
 .panel.panel-life {
 	padding-bottom: 20px;
+}
+
+.panel.panel-community {
+	min-height: 300px;
 }
 
 .next-page-button,
@@ -625,10 +634,13 @@ body:has(#page-home:checked) .next-page-home,
 body:has(#page-life:checked) .next-page-life,
 body:has(#page-projects:checked) .next-page-projects,
 body:has(#page-notes:checked) .next-page-notes,
+body:has(#page-links:checked) .next-page-links,
+body:has(#page-community:checked) .next-page-community,
 body:has(#page-life:checked) .back-page-life,
 body:has(#page-projects:checked) .back-page-projects,
 body:has(#page-notes:checked) .back-page-notes,
-body:has(#page-links:checked) .back-page-links {
+body:has(#page-links:checked) .back-page-links,
+body:has(#page-community:checked) .back-page-community {
 	display: inline-flex;
 }
 
@@ -636,7 +648,8 @@ body:has(#page-home:checked) .panel-home,
 body:has(#page-life:checked) .panel-life,
 body:has(#page-projects:checked) .panel-projects,
 body:has(#page-notes:checked) .panel-notes,
-body:has(#page-links:checked) .panel-links {
+body:has(#page-links:checked) .panel-links,
+body:has(#page-community:checked) .panel-community {
 	animation: panel-in 300ms steps(30, end) both;
 	display: block;
 }
@@ -1429,6 +1442,49 @@ footer {
 	border-color: var(--main-45);
 	box-shadow: 7px 7px 0 var(--shadow);
 	transform: rotate(0deg) translateY(-3px);
+}
+
+.friends-links {
+	margin-top: 20px;
+	width: fit-content;
+	max-width: 100%;
+	
+	img {
+		width: 110px;
+		height: auto;
+	}
+}
+
+iframe {
+	border: none;
+}
+
+.next-page-button,
+.back-page-button {
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+}
+
+.next-page-button::after,
+.back-page-button::before {
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	background-color: currentColor;
+	mask-size: 24px 24px;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.next-page-button::after {
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='M13 18l6-6'/%3E%3Cpath d='M13 6l6 6'/%3E%3C/svg%3E");
+}
+
+.back-page-button::before {
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5'/%3E%3Cpath d='M11 18l-6-6'/%3E%3Cpath d='M11 6l-6 6'/%3E%3C/svg%3E");
 }
 
 .next-page-button svg,
