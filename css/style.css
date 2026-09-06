@@ -1,5 +1,4 @@
 * {
-	border-radius: 5px;
 	box-sizing: border-box;
 }
 
@@ -394,7 +393,7 @@ summary {
 	display: grid;
 	gap: 20px;
 	grid-template-columns: 250px minmax(0, 1fr) 310px;
-	min-height: 820px;
+	padding: 10px 0;
 }
 
 .folders {
@@ -559,7 +558,8 @@ body:has(#page-links:checked) .folders label[for="page-links"] span {
 
 .panel {
 	display: none;
-	min-height: 500px;
+	min-height: 400px;
+	padding-bottom: 40px;
 	position: relative;
 	z-index: 1;
 }
